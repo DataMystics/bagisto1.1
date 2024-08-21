@@ -4,7 +4,7 @@ namespace Webkul\paystack\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class paystackServiceProvider extends ServiceProvider
+class PaystackServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap services.
