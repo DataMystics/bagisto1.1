@@ -12,6 +12,7 @@ abstract class Paystack extends Payment
      *
      * @param  array  $params
      * @return string
+     * 
      */
     public function getpaystackUrl($params = [])
     {
