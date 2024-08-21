@@ -40,7 +40,8 @@ class StandardController extends Controller
         $customer['email'] = $arr['email'];
 
        
-        dd($customer);
+        // dd($customer);
+        $this->redirectToGateway($customer);
 
         return view('paystack::standard-redirect');
     }
@@ -88,10 +89,10 @@ class StandardController extends Controller
     }
 
 
-    public function redirectToGateway()
+    public function redirectToGateway($customer)
     {
         try{
-            return Paystack::getAuthorizationUrl()->redirectNow();
+            return Paystack::getAuthorizationUrl($customer)->redirectNow();
         }catch(\Exception $e) {
             session()->flash('error', $e->getMessage());
             return redirect()->route('shop.checkout.cart.index');
