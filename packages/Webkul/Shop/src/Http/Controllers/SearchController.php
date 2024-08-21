@@ -42,7 +42,7 @@ class SearchController extends Controller
             return redirect()->to($searchTerm->redirect_url);
         }
 
-        // return view('shop::search.index');
+        return view('shop::search.index');
     }
 
     /**
