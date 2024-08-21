@@ -2,6 +2,7 @@
 
 namespace Webkul\Paystack\Http\Controllers;
 
+use GuzzleHttp\Psr7\Request;
 use Webkul\Checkout\Facades\Cart;
 use Webkul\Paystack\Helpers\Ipn;
 use Webkul\Sales\Repositories\OrderRepository;
@@ -24,8 +25,9 @@ class StandardController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function redirect()
+    public function redirect(Request $request)
     {
+        dd($request);
         return view('paystack::standard-redirect');
     }
 
