@@ -1,8 +1,9 @@
 <?php
 
-namespace Webkul\paystack\Providers;
+namespace Webkul\Paystack\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Webkul\paystack\Providers\EventServiceProvider;
 
 class PaystackServiceProvider extends ServiceProvider
 {

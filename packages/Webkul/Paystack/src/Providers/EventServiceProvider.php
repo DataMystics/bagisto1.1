@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\paystack\Providers;
+namespace Webkul\Paystack\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
