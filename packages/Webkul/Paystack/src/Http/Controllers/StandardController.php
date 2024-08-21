@@ -35,7 +35,12 @@ class StandardController extends Controller
         }
 
         $customer['currency'] = $arr['currency_code'];
-        $customer['amount'] = $arr['amount'];
+        $amount = $arr['amount']; // Assuming $arr['amount'] is '56.000'
+        $amountInCents = $amount * 100; // Multiply by 100
+        
+        // Format the result to 3 decimal places
+        $customer['amount'] = number_format($amountInCents, 3, '.', '');
+        
         $customer['reference'] = $arr['cart_id'];
         $customer['email'] = $arr['email'];
 
