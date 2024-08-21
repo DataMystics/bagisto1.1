@@ -26,7 +26,7 @@ class StandardController extends Controller
      */
     public function redirect()
     {
-        dd(request()->all());
+        ddd();
         return view('paystack::standard-redirect');
     }
 
