@@ -89,6 +89,10 @@ class Standard extends Paystack
             if (isset($fields['discount_amount'])) {
                 $fields['discount_amount_cart'] = $fields['discount_amount'];
             }
+
+            if (isset($fields['email'])) {
+                $fields['email'] = $fields['email'];
+            }
         } else {
             $fields = array_merge($fields, [
                 'cmd'           => '_ext-enter',

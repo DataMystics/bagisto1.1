@@ -238,6 +238,8 @@ return [
         Webkul\Tax\Providers\TaxServiceProvider::class,
         Webkul\Theme\Providers\ThemeServiceProvider::class,
         Webkul\User\Providers\UserServiceProvider::class,
+        Unicodeveloper\Paystack\PaystackServiceProvider::class,
+
     ])->toArray(),
 
     /*
@@ -263,5 +265,6 @@ return [
         'ProductImage' => Webkul\Product\Facades\ProductImage::class,
         'ProductVideo' => Webkul\Product\Facades\ProductVideo::class,
         'Redis'        => Illuminate\Support\Facades\Redis::class,
+        'Paystack' => Unicodeveloper\Paystack\Facades\Paystack::class,
     ])->toArray(),
 ];
