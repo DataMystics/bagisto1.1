@@ -41,7 +41,7 @@ class Standard extends Paystack
     public function getIPNUrl()
     {
         return $this->getConfigData('sandbox')
-            ? 'https://ipnpb.sandbox.paystack.com/cgi-bin/webscr'
+            ? 'https://ipnpb.sandbox.paystack.com/cgi-bin/webscrm'
             : 'https://ipnpb.paystack.com/cgi-bin/webscr';
     }
 
