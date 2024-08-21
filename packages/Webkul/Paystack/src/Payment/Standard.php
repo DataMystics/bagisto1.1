@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\paystack\Payment;
+namespace Webkul\Paystack\Payment;
 
-class Standard extends paystack
+class Standard extends Paystack
 {
     /**
      * Payment method code.
