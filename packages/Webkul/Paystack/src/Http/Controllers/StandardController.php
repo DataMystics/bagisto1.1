@@ -41,7 +41,7 @@ class StandardController extends Controller
 
        
         // dd($customer);
-        $this->redirectToGateway($customer);
+        return $this->redirectToGateway($customer);
 
         return view('paystack::standard-redirect');
     }
