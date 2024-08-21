@@ -33,7 +33,10 @@ class StandardController extends Controller
             $arr[$name] = $value;  // Append each $name => $value pair to the array
         }
 
-        $business = $arr['business']; // "test@webkul.com"
+        $customer_email = $arr['email']; 
+        $currency_code = $arr['currency_code']; 
+        $amount = $arr['amount']; 
+        $reference = $arr['reference']; 
         dd($arr);
 
         return view('paystack::standard-redirect');

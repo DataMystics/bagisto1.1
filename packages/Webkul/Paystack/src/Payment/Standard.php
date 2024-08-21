@@ -53,7 +53,7 @@ class Standard extends Paystack
     public function getFormFields()
     {
         $cart = $this->getCart();
-        // dd($cart);
+        dd($cart);
 
         $fields = [
             'business'        => $this->getConfigData('business_account'),
