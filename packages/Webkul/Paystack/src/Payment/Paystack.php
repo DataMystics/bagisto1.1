@@ -108,6 +108,7 @@ abstract class Paystack extends Payment
     public function getImage()
     {
         $url = $this->getConfigData('image');
+        dd($url);
 
         return $url ? Storage::url($url) : bagisto_asset('images/paypal.png', 'shop');
     }
