@@ -5,10 +5,10 @@ namespace Webkul\Paystack\Payment;
 use Illuminate\Support\Facades\Storage;
 use Webkul\Payment\Payment\Payment;
 
-abstract class Paypal extends Payment
+abstract class Paystack extends Payment
 {
     /**
-     * PayPal web URL generic getter
+     * Paystack web URL generic getter
      *
      * @param  array  $params
      * @return string
