@@ -4398,7 +4398,7 @@ return [
     ],
 
     'footer' => [
-        'copy-right' => 'Powered by <a href="https://stratostech.tech" target="_blank">Stratostech</a>, A  Project by <a href="https://stratostech.tech" target="_blank">stratostech</a>',
+        'copy-right' => 'Powered by <a href="https://bagisto.com/" target="_blank">Bagisto</a>, A Community Project by <a href="https://webkul.com/" target="_blank">Webkul</a>',
     ],
 
     'emails' => [
