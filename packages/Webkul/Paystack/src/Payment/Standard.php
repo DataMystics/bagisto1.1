@@ -53,7 +53,7 @@ class Standard extends Paystack
     public function getFormFields()
     {
         $cart = $this->getCart();
-        dd($cart);
+        // dd($cart);
 
         $fields = [
             'business'        => $this->getConfigData('business_account'),
@@ -70,6 +70,7 @@ class Standard extends Paystack
             'shipping'        => $cart->selected_shipping_rate ? $cart->selected_shipping_rate->price : 0,
             'discount_amount' => $cart->discount_amount,
             'customer_email' => $cart->customer_email,
+            'cart_id' => $cart->id
         ];
 
         if ($this->getIsLineItemsEnabled()) {

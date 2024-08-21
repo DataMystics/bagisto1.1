@@ -36,7 +36,7 @@ class StandardController extends Controller
         $customer_email = $arr['email']; 
         $currency_code = $arr['currency_code']; 
         $amount = $arr['amount']; 
-        $reference = $arr['reference']; 
+        $reference = $arr['cart_id']; 
         dd($arr);
 
         return view('paystack::standard-redirect');
