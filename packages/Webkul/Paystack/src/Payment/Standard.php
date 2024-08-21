@@ -53,6 +53,7 @@ class Standard extends Paystack
     public function getFormFields()
     {
         $cart = $this->getCart();
+        dd($cart);
 
         $fields = [
             'business'        => $this->getConfigData('business_account'),
@@ -76,8 +77,7 @@ class Standard extends Paystack
                 'upload' => 1,
             ]);
 
-            $data =  $this->addAddressFields($fields);
-            dd($data);
+            
             $this->addLineItemsFields($fields);
 
             if ($cart->selected_shipping_rate) {
