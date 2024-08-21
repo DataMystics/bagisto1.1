@@ -24,7 +24,7 @@ class SearchController extends Controller
      */
     public function index()
     {
-        dd();
+        
         $this->validate(request(), [
             'query' => ['required', 'string', 'regex:/^[^\\\\]+$/u'],
         ]);
@@ -34,6 +34,8 @@ class SearchController extends Controller
             'channel_id' => core()->getCurrentChannel()->id,
             'locale'     => app()->getLocale(),
         ]);
+
+        dd($searchTerm);
 
         if ($searchTerm?->redirect_url) {
             return redirect()->to($searchTerm->redirect_url);
