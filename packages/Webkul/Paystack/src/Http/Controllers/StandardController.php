@@ -26,9 +26,15 @@ class StandardController extends Controller
      */
     public function redirect()
     {
-        $paystackStandard = app('Webkul\paystack\Payment\Standard');
-        dd($paystackStandard);
-        
+        $arr = [];
+        $paystackStandard = app('Webkul\Paystack\Payment\Standard');
+
+        foreach ($paystackStandard->getFormFields() as $name => $value) {
+            $arr[$name] = $value;  // Append each $name => $value pair to the array
+        }
+
+        dd($arr);
+
         return view('paystack::standard-redirect');
     }
 
