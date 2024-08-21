@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\paystack\Helpers;
+namespace Webkul\Paystack\Helpers;
 
-use Webkul\paystack\Payment\Standard;
+use Webkul\Paystack\Payment\Standard;
 use Webkul\Sales\Repositories\InvoiceRepository;
 use Webkul\Sales\Repositories\OrderRepository;
 

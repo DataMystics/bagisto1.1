@@ -1,9 +1,9 @@
 <?php
 
-namespace Webkul\paystack\Http\Controllers;
+namespace Webkul\Paystack\Http\Controllers;
 
 use Webkul\Checkout\Facades\Cart;
-use Webkul\paystack\Helpers\Ipn;
+use Webkul\Paystack\Helpers\Ipn;
 use Webkul\Sales\Repositories\OrderRepository;
 use Webkul\Sales\Transformers\OrderResource;
 

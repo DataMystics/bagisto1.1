@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\paystack\Http\Controllers;
+namespace Webkul\Paystack\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;

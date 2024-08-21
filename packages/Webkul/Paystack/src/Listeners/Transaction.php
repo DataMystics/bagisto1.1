@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\paystack\Listeners;
+namespace Webkul\Paystack\Listeners;
 
-use Webkul\paystack\Payment\SmartButton;
+use Webkul\Paystack\Payment\SmartButton;
 use Webkul\Sales\Repositories\OrderTransactionRepository;
 
 class Transaction

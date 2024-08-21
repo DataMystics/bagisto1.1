@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\paystack\Providers;
+namespace Webkul\Paystack\Providers;
 
 use Webkul\Core\Providers\CoreModuleServiceProvider;
 

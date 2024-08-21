@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Webkul\paystack\Http\Controllers\SmartButtonController;
-use Webkul\paystack\Http\Controllers\StandardController;
+use Webkul\Paystack\Http\Controllers\SmartButtonController;
+use Webkul\Paystack\Http\Controllers\StandardController;
 
 Route::group(['middleware' => ['web']], function () {
     Route::prefix('paystack/standard')->group(function () {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\paystack\Payment;
+namespace Webkul\Paystack\Payment;
 
 use Illuminate\Support\Facades\Storage;
 use Webkul\Payment\Payment\Payment;
