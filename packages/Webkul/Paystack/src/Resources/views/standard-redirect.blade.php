@@ -1,11 +1,8 @@
 <?php $paystackStandard = app('Webkul\paystack\Payment\Standard') ?>
 @foreach ($paystackStandard->getFormFields() as $name => $value)
+<h1>Name is { $name} Value is {$value}</h1>
+{{-- <input type="text" name="{{ $name }}" value="{{ $value }}"> --}}
 
-<input
-    type="text"
-    name="{{ $name }}"
-    value="{{ $value }}"
-/>
 
 @endforeach
 
