@@ -2,6 +2,7 @@
 
 namespace Webkul\Paystack\Http\Controllers;
 
+use Illuminate\Support\Facades\Log;
 use Webkul\Paystack\Helpers\Ipn;
 use Webkul\Checkout\Facades\Cart;
 use Webkul\Sales\Transformers\OrderResource;
@@ -99,6 +100,7 @@ class StandardController extends Controller
         try{
             return Paystack::getAuthorizationUrl($customer)->redirectNow();
         }catch(\Exception $e) {
+            Log::alert($e);
             session()->flash('error', $e->getMessage());
             return redirect()->route('shop.checkout.cart.index');
         }        
