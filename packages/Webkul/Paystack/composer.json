@@ -16,7 +16,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Webkul\\Paystack\\Providers\\paystackServiceProvider"
+                "Webkul\\Paystack\\Providers\\PaystackServiceProvider"
             ],
             "aliases": {}
         }
