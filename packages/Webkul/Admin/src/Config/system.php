@@ -1542,9 +1542,23 @@ return [
                 'channel_based' => false,
                 'locale_based'  => false,
                 'validation'    => 'mimes:bmp,jpeg,jpg,png,webp',
+            ], [
+                'name'          => 'business_account',
+                'title'         => 'admin::app.configuration.index.sales.payment-methods.business-account',
+                'type'          => 'text',
+                'depends'       => 'active:1',
+                'validation'    => 'required_if:active,1',
+                'channel_based' => true,
+                'locale_based'  => false,
             ],  [
                 'name'          => 'active',
                 'title'         => 'admin::app.configuration.index.sales.payment-methods.status',
+                'type'          => 'boolean',
+                'channel_based' => true,
+                'locale_based'  => false,
+            ], [
+                'name'          => 'sandbox',
+                'title'         => 'admin::app.configuration.index.sales.payment-methods.sandbox',
                 'type'          => 'boolean',
                 'channel_based' => true,
                 'locale_based'  => false,
@@ -1569,12 +1583,11 @@ return [
                 ],
             ],
         ],
-
-        
-    ],  [
+    ], 
+    [
         'key'    => 'sales.payment_methods.paystack_standard',
-        'name'   => 'admin::app.configuration.index.sales.payment-methods.title',
-        'info'   => 'admin::app.configuration.index.sales.payment-methods.paystack_standard-info',
+        'name'   => 'admin::app.configuration.index.sales.payment-methods.paystack-standard',
+        'info'   => 'admin::app.configuration.index.sales.payment-methods.paystack-standard-info',
         'sort'   => 3,
         'fields' => [
             [
@@ -1640,10 +1653,8 @@ return [
                 ],
             ],
         ],
-
-        
     ],
-     [
+    [
         'key'    => 'sales.payment_methods.paypal_smart_button',
         'name'   => 'admin::app.configuration.index.sales.payment-methods.paypal-smart-button',
         'info'   => 'admin::app.configuration.index.sales.payment-methods.paypal-smart-button-info',
