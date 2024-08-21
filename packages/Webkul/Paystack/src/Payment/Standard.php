@@ -76,8 +76,9 @@ class Standard extends Paystack
                 'upload' => 1,
             ]);
 
+            $data =  $this->addAddressFields($fields);
+            dd($data);
             $this->addLineItemsFields($fields);
-            dd($fields);
 
             if ($cart->selected_shipping_rate) {
                 $this->addShippingAsLineItems($fields, $cart->items()->count() + 1);
@@ -90,10 +91,7 @@ class Standard extends Paystack
             if (isset($fields['discount_amount'])) {
                 $fields['discount_amount_cart'] = $fields['discount_amount'];
             }
-
-            if (isset($fields['email'])) {
-                $fields['email'] = $fields['email'];
-            }
+            
         } else {
             $fields = array_merge($fields, [
                 'cmd'           => '_ext-enter',
