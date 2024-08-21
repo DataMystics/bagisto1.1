@@ -2,7 +2,7 @@
 
 namespace Webkul\Paystack\Listeners;
 
-use Webkul\Paystack\Payment\SmartButton;
+
 use Webkul\Sales\Repositories\OrderTransactionRepository;
 
 class Transaction

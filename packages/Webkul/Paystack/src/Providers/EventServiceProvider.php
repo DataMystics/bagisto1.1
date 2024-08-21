@@ -19,6 +19,6 @@ class EventServiceProvider extends ServiceProvider
             $viewRenderEventManager->addTemplate('paystack::checkout.onepage.paystack-smart-button');
         });
 
-        Event::listen('sales.invoice.save.after', 'Webkul\Payystack\Listeners\Transaction@saveTransaction');
+        Event::listen('sales.invoice.save.after', 'Webkul\Paystack\Listeners\Transaction@saveTransaction');
     }
 }
