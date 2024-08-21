@@ -8,7 +8,7 @@ return [
             'bagisto'              => 'Bagisto',
             'email'                => 'Email',
             'email-not-exist'      => 'We cannot find a user with that email address.',
-            'footer'               => '© Copyright 2010 - :current_year, Webkul Software (Registered in India). All rights reserved.',
+            'footer'               => '© Copyright 2024 - :current_year, StratosTech Software (Registered in Ghana). All rights reserved.',
             'forgot-password-text' => 'If you forgot your password, recover it by entering your email address.',
             'page-title'           => 'Forgot your password ?',
             'reset-link-sent'      => 'We have e-mailed your reset password link.',
