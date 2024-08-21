@@ -10,13 +10,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Webkul\\paystack\\": "src/"
+            "Webkul\\Paystack\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Webkul\\paystack\\Providers\\paystackServiceProvider"
+                "Webkul\\Paystack\\Providers\\paystackServiceProvider"
             ],
             "aliases": {}
         }
