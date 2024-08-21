@@ -3,7 +3,7 @@
 namespace Webkul\Paystack\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Webkul\paystack\Providers\EventServiceProvider;
+use Webkul\Paystack\Providers\EventServiceProvider;
 
 class PaystackServiceProvider extends ServiceProvider
 {
