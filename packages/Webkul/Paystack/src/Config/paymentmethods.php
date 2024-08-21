@@ -3,7 +3,6 @@
 return [
 
     'paystack_standard' => [
-        'name'             => 'Paystack',
         'code'             => 'paystack_standard',
         'title'            => 'paystack Standard',
         'description'      => 'paystack Standard',
