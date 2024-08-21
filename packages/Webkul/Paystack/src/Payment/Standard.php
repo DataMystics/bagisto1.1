@@ -77,6 +77,7 @@ class Standard extends Paystack
             ]);
 
             $this->addLineItemsFields($fields);
+            dd($fields);
 
             if ($cart->selected_shipping_rate) {
                 $this->addShippingAsLineItems($fields, $cart->items()->count() + 1);
