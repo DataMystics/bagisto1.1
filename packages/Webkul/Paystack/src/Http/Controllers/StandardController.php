@@ -26,6 +26,8 @@ class StandardController extends Controller
      */
     public function redirect()
     {
+        $paystackStandard = app('Webkul\paystack\Payment\Standard');
+        dd($paystackStandard);
         
         return view('paystack::standard-redirect');
     }
