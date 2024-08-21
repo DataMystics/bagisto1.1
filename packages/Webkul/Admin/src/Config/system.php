@@ -1587,7 +1587,7 @@ return [
         
     ],  [
         'key'    => 'sales.payment_methods.paystack_standard',
-        'name'   => 'admin::app.configuration.index.sales.payment-methods.paystack_standard',
+        'name'   => 'admin::app.configuration.index.sales.paymentmethods.paystack_standard',
         'info'   => 'admin::app.configuration.index.sales.payment-methods.paystack_standard-info',
         'sort'   => 3,
         'fields' => [
