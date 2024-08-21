@@ -12,14 +12,14 @@ return [
         'sort'             => 0,
     ],
 
-    'paypal_standard' => [
-        'code'             => 'paypal_standard',
-        'title'            => 'PayPal Standard',
-        'description'      => 'PayPal Standard',
-        'class'            => 'Webkul\Paypal\Payment\Standard',
-        'sandbox'          => true,
-        'active'           => true,
-        'business_account' => 'test@webkul.com',
-        'sort'             => 3,
-    ],
+    // 'paypal_standard' => [
+    //     'code'             => 'paypal_standard',
+    //     'title'            => 'PayPal Standard',
+    //     'description'      => 'PayPal Standard',
+    //     'class'            => 'Webkul\Paypal\Payment\Standard',
+    //     'sandbox'          => true,
+    //     'active'           => true,
+    //     'business_account' => 'test@webkul.com',
+    //     'sort'             => 3,
+    // ],
 ];
