@@ -26,7 +26,7 @@ class Transaction
     public function saveTransaction($invoice)
     {
         $data = request()->all();
-
+        dd($data);
        
         if ($invoice->order->payment->method == 'paystack_standard') {
             $this->orderTransactionRepository->create([
