@@ -15,10 +15,9 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Event::listen('bagisto.shop.layout.body.after', static function (ViewRenderEventManager $viewRenderEventManager) {
-            $viewRenderEventManager->addTemplate('paystack::checkout.onepage.paystack-smart-button');
-        });
+    
 
-        Event::listen('sales.invoice.save.after', 'Webkul\Paystack\Listeners\Transaction@saveTransaction');
+        // Event::listen('sales.invoice.save.after', 'Webkul\Paystack\Listeners\Transaction@saveTransaction');
+        Event::listen('checkout.order.save.after', 'Webkul\Paystack\Listeners\GenerateInvoice@handle');
     }
 }
