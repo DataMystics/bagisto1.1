@@ -24,6 +24,7 @@ class SearchController extends Controller
      */
     public function index()
     {
+        dd();
         $this->validate(request(), [
             'query' => ['required', 'string', 'regex:/^[^\\\\]+$/u'],
         ]);
