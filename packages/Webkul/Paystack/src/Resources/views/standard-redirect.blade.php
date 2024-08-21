@@ -1,6 +1,15 @@
 <?php $paystackStandard = app('Webkul\paystack\Payment\Standard') ?>
+@foreach ($paystackStandard->getFormFields() as $name => $value)
 
-<body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+<input
+    type="text"
+    name="{{ $name }}"
+    value="{{ $value }}"
+/>
+
+@endforeach
+
+{{-- <body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
     You will be redirected to the paystack website in a few seconds.
     
 
@@ -21,4 +30,4 @@
     <script type="text/javascript">
         document.getElementById("paystack_standard_checkout").submit();
     </script>
-</body>
+</body> --}}
