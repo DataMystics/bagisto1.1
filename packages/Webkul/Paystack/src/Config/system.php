@@ -2,7 +2,7 @@
 
 return [
     [
-        'key'    => 'sales.payment_methods.paystack_standard',
+        'key'    => 'sales.paymentmethods.paystack_standard',
         'name'   => 'paystack_standard',
         'sort'   => 1,
         'fields' => [
