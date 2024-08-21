@@ -2,10 +2,11 @@
 
 namespace Webkul\Paystack\Http\Controllers;
 
-use Webkul\Checkout\Facades\Cart;
 use Webkul\Paystack\Helpers\Ipn;
-use Webkul\Sales\Repositories\OrderRepository;
+use Webkul\Checkout\Facades\Cart;
 use Webkul\Sales\Transformers\OrderResource;
+use Unicodeveloper\Paystack\Facades\Paystack;
+use Webkul\Sales\Repositories\OrderRepository;
 
 class StandardController extends Controller
 {
@@ -33,11 +34,13 @@ class StandardController extends Controller
             $arr[$name] = $value;  // Append each $name => $value pair to the array
         }
 
-        $customer_email = $arr['email']; 
-        $currency_code = $arr['currency_code']; 
-        $amount = $arr['amount']; 
-        $reference = $arr['cart_id']; 
-        dd($arr);
+        $customer['currency'] = $arr['currency_code'];
+        $customer['amount'] = $arr['amount'];
+        $customer['reference'] = $arr['cart_id'];
+        $customer['email'] = $arr['email'];
+
+       
+        dd($customer);
 
         return view('paystack::standard-redirect');
     }
@@ -82,5 +85,16 @@ class StandardController extends Controller
     public function ipn()
     {
         $this->ipnHelper->processIpn(request()->all());
+    }
+
+
+    public function redirectToGateway()
+    {
+        try{
+            return Paystack::getAuthorizationUrl()->redirectNow();
+        }catch(\Exception $e) {
+            session()->flash('error', $e->getMessage());
+            return redirect()->route('shop.checkout.cart.index');
+        }        
     }
 }
