@@ -41,8 +41,9 @@ class StandardController extends Controller
         
         // Format the result to 3 decimal places
         $customer['amount'] = number_format($amountInCents, 3, '.', '');
-        
-        $customer['reference'] = $arr['cart_id'];
+        //generate a a random string something like TR00012123
+        $customer['reference'] = 'TR'.rand(100000,999999);
+        // $customer['reference'] = $arr['cart_id'];
         $customer['email'] = $arr['email'];
 
        
@@ -100,7 +101,7 @@ class StandardController extends Controller
         try{
             return Paystack::getAuthorizationUrl($customer)->redirectNow();
         }catch(\Exception $e) {
-            Log::alert($e);
+            Log::alert($e->getMessage());
             session()->flash('error', $e->getMessage());
             return redirect()->route('shop.checkout.cart.index');
         }        
