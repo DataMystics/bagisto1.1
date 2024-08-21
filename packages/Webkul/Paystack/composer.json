@@ -1,0 +1,25 @@
+{
+    "name": "bagisto/laravel-paystack",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mawuli Agbenyo",
+            "email": "mawulikofiagbenyo@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Webkul\\paystack\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webkul\\paystack\\Providers\\paystackServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev"
+}
