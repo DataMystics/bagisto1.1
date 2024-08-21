@@ -18,4 +18,13 @@ return [
         'active'      => true,
         'sort'        => 2,
     ],
+
+    'Paystack'   => [
+        'code'        => 'paystacktransfer',
+        'title'       => 'Paystack Transfer',
+        'description' => 'Paystack Transfer',
+        'class'       => 'Webkul\Payment\Payment\PaystackTransfer',
+        'active'      => true,
+        'sort'        => 3,
+    ],
 ];

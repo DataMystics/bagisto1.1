@@ -42,11 +42,24 @@ class GenerateInvoice
         if (
             $order->payment->method == 'moneytransfer'
             && core()->getConfigData('sales.payment_methods.moneytransfer.generate_invoice')
-        ) {
+        )
+         {
             $this->invoiceRepository->create(
                 $this->prepareInvoiceData($order),
                 core()->getConfigData('sales.payment_methods.moneytransfer.invoice_status'),
                 core()->getConfigData('sales.payment_methods.moneytransfer.order_status')
+            );
+        }
+
+        if (
+            $order->payment->method == 'paystacktransfer'
+            && core()->getConfigData('sales.payment_methods.paystacktransfer.generate_invoice')
+        )
+         {
+            $this->invoiceRepository->create(
+                $this->prepareInvoiceData($order),
+                core()->getConfigData('sales.payment_methods.paystacktransfer.invoice_status'),
+                core()->getConfigData('sales.payment_methods.paystacktransfer.order_status')
             );
         }
     }
