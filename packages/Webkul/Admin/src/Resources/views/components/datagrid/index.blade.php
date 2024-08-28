@@ -5,14 +5,14 @@
     {{ $slot }}
 </v-datagrid>
 
-{{-- @pushOnce('scripts')
+@pushOnce('scripts')
     <script
         type="text/x-template"
         id="v-datagrid-template"
     >
         <div>
             <!-- Toolbar -->
-            <x-admin::datagrid.toolbar />
+           
 
             <div class="mt-4 flex">
                 <x-admin::datagrid.table :isMultiRow="$isMultiRow">
@@ -549,4 +549,4 @@
             },
         });
     </script>
-@endPushOnce --}}
+@endPushOnce
