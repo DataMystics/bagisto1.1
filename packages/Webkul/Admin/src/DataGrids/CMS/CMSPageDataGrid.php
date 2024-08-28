@@ -22,7 +22,9 @@ class CMSPageDataGrid extends DataGrid
                 'cms_pages.id',
                 'cms_page_translations.page_title',
                 'cms_page_translations.url_key',
-                'cms_page_translations.locale'
+                'cms_page_translations.locale',
+                'cms_page_channels.channel_id'
+
             )
             ->addSelect(DB::raw('GROUP_CONCAT(DISTINCT channels.code) as channel'))
             ->join('cms_page_translations', function ($join) use ($currentLocale) {
