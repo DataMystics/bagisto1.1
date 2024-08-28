@@ -2,7 +2,6 @@
 
 
 <v-datagrid {{ $attributes }}>
-    @dd($slot)
     {{ $slot }}
 </v-datagrid>
 
