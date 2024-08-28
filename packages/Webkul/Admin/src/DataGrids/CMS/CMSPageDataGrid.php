@@ -15,7 +15,7 @@ class CMSPageDataGrid extends DataGrid
     public function prepareQueryBuilder()
     {
         $currentLocale = app()->getLocale();
-        dd($currentLocale);
+        
 
         $queryBuilder = DB::table('cms_pages')
             ->select(
@@ -33,6 +33,7 @@ class CMSPageDataGrid extends DataGrid
             ->leftJoin('channels', 'cms_page_channels.channel_id', '=', 'channels.id')
             ->groupBy('cms_pages.id', 'cms_page_translations.locale');
 
+            dd($queryBuilder);
         $this->addFilter('id', 'cms_pages.id');
         $this->addFilter('channel', 'cms_page_channels.channel_id');
         $this->addFilter('locale', 'cms_page_translations.locale');
