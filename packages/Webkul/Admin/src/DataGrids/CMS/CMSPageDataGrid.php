@@ -22,11 +22,9 @@ class CMSPageDataGrid extends DataGrid
                 'cms_pages.id',
                 'cms_page_translations.page_title',
                 'cms_page_translations.url_key',
-                'cms_page_translations.locale',
-                'cms_page_channels.channel_id'
-
+                'cms_page_translations.locale'
             )
-            ->addSelect(DB::raw('GROUP_CONCAT(DISTINCT channels.channel_id) as channel'))
+            ->addSelect(DB::raw('GROUP_CONCAT(DISTINCT channels.code) as channel'))
             ->join('cms_page_translations', function ($join) use ($currentLocale) {
                 $join->on('cms_pages.id', '=', 'cms_page_translations.cms_page_id')
                     ->where('cms_page_translations.locale', '=', $currentLocale);
@@ -40,7 +38,7 @@ class CMSPageDataGrid extends DataGrid
         $this->addFilter('channel', 'cms_page_channels.channel_id');
         $this->addFilter('locale', 'cms_page_translations.locale');
 
-    
+        
         return $queryBuilder;
     }
 
