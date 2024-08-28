@@ -5,7 +5,7 @@
     {{ $slot }}
 </v-datagrid>
 
-@pushOnce('scripts')
+{{-- @pushOnce('scripts')
     <script
         type="text/x-template"
         id="v-datagrid-template"
@@ -549,4 +549,4 @@
             },
         });
     </script>
-@endPushOnce
+@endPushOnce --}}
