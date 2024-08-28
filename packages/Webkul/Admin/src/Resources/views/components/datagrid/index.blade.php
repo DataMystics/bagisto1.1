@@ -1,4 +1,4 @@
-{{-- @props(['isMultiRow' => false])
+@props(['isMultiRow' => false])
 
 <v-datagrid {{ $attributes }}>
     {{ $slot }}
@@ -548,4 +548,4 @@
             },
         });
     </script>
-@endPushOnce --}}
+@endPushOnce
