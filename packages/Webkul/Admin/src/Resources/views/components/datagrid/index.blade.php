@@ -3,7 +3,7 @@
 
 <v-datagrid {{ $attributes }}>
     @dd($slot)
-    {{-- {{ $slot }} --}}
+    {{ $slot }}
 </v-datagrid>
 
 @pushOnce('scripts')
