@@ -15,7 +15,7 @@
             <x-admin::datagrid.toolbar />
 
             <div class="mt-4 flex">
-                
+                <x-admin::datagrid.table :isMultiRow="$isMultiRow">
                     <template #header="{
                         isLoading,
                         available,
@@ -55,7 +55,7 @@
                         >
                         </slot>
                     </template>
-                
+                </x-admin::datagrid.table>
             </div>
         </div>
     </script>
