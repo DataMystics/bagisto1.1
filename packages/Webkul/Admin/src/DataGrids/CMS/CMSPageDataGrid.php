@@ -38,7 +38,7 @@ class CMSPageDataGrid extends DataGrid
         $this->addFilter('channel', 'cms_page_channels.channel_id');
         $this->addFilter('locale', 'cms_page_translations.locale');
 
-        dd($queryBuilder);
+    
         return $queryBuilder;
     }
 
