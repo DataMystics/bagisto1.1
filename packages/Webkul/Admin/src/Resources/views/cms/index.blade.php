@@ -24,9 +24,9 @@
         </div>
     </div>
 
-    {{-- {!! view_render_event('bagisto.admin.cms.pages.list.before') !!} --}}
+    {!! view_render_event('bagisto.admin.cms.pages.list.before') !!}
 
-    <x-admin::datagrid :src="route('admin.cms.index')" />
+    {{-- <x-admin::datagrid :src="route('admin.cms.index')" /> --}}
     
     {!! view_render_event('bagisto.admin.cms.pages.list.after') !!}
 
