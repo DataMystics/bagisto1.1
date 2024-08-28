@@ -15,6 +15,7 @@ class CMSPageDataGrid extends DataGrid
     public function prepareQueryBuilder()
     {
         $currentLocale = app()->getLocale();
+        dd($currentLocale);
 
         $queryBuilder = DB::table('cms_pages')
             ->select(
