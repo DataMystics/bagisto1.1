@@ -47,7 +47,7 @@ class StandardController extends Controller
         $customer['email'] = $arr['email'];
 
        
-        dd($arr);
+        dd($amount);
         // return $this->redirectToGateway($customer);
 
         // return view('paystack::standard-redirect');
