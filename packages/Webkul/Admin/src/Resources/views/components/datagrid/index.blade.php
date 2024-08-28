@@ -1,8 +1,9 @@
 @props(['isMultiRow' => false])
 
-@dd($attributes)
+
 <v-datagrid {{ $attributes }}>
-    {{ $slot }}
+    @dd($slot)
+    {{-- {{ $slot }} --}}
 </v-datagrid>
 
 @pushOnce('scripts')
